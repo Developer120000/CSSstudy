@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+section{
+	width: 600px;
+	
+	height: 200px;	
+}
+section:nth-of-type(1) {background-color: pink;}
+section:nth-of-type(2) {
+	background-color: lightblue;
+	position: relative;
+	top: -100px;
+	left: 100px;
+}
+section:nth-of-type(3) {background-color: yellow;}
+</style>
+</head>
+<body>
+<!-- 
+	position 은 특정 영역 안에서 위치 지정 하는 속성 / float 는 큰 영역의 덩어리를 좌우로 배치
+	- static : 기본값, 문서의 흐름에 거스르지 않음, 다른 요소와 겹치지 않게
+			   top, bottom, left, right 속성에 영향을 받지 않는다.
+	- relative : 원래 위치값에 top, bottom, left, right 이동
+				 어떤 요소가 relative 로 위치 이동 했어도 아래 요소는 원래 흐름에 거스르지 않는다.
+	- absolute : 일반적인 문서흐름을 제거 하고, 부모 position 기준을 상대적으로 위치 지정
+				 만약에 부모의 포지션이 없으면 body 를 기준으로 함 (절대 위치 좌표 설정이 됨)
+	- fixed : 일반적인 문서흐름을 제거 하고, 지정한 위치 고정 (절대 좌표)
+	- sticky : 일반적인 문서흐름을 제거하고, 스크롤 동작이 존재하는 가장 가까운 요소에 위치 지정
+ -->
+	<section></section>
+	<section></section>
+	<p>한국 ICT 인재개발원</p>
+	<section></section>
+</body>
+</html>

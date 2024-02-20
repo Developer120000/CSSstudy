@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 배경 위에 내용 겹치기 z-index 사용</title>
+<style type="text/css">
+	.wrap{
+		border: 1px solid red;
+		position: relative;
+		width: 800px;
+		margin: 0 auto;
+	}
+	img{
+		position: absolute;
+		top: 0px;
+		z-index: -1;
+	}
+	p{width: 100%;}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<h2>한국ICT인재개발원</h2>
+	<p>한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원
+	한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원
+	한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원한국ICT인재개발원
+	</p>
+	<img src="../images/rose.jpg">
+</div>	
+</body>
+</html>

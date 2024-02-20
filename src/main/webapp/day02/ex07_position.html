@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{margin: 0px; padding: 0px;} /* 초기화 */
+	.wrap{
+		width: 800px;
+		border: 5px solid black;
+		margin: 50px auto;
+	}
+	.wrap::after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.left{
+		width: 400px;
+		height: 400px;
+		background-color: lightgreen;
+		float: left;
+		position: relative; /* box의 부모는 right 기 때문에 부모포지션이 없어서 밖으로 나가게 된다. */
+	}
+	.right{
+		width: 400px;
+		height: 400px;
+		background-color: lightblue;
+		float: left;
+		/* position: relative; */ /* box의 부모기 때문에 부모포지션을 기준으로 지정된다 */
+	}
+	.bottom{
+		/* clear: both; */
+		width: 800px;
+		height: 100px;
+		background-color: pink;
+		float: left;
+	}
+	.box{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: absolute;
+		right: 20px;
+		bottom: 30px;
+	}
+	
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="left"></div>
+		<div class="right">
+			<p class="box"></p>
+		</div>
+		<div class="bottom"></div>
+	</div>
+</body>
+</html>
