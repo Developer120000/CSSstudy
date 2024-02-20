@@ -4,47 +4,54 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-.wow {
-    margin: 0 auto;
-    width: 1200px;
+*{margin: 0px; padding: 0px;}
+.wow, #header, #left, #right, #footer{
+	border: 1px solid black;
 }
-#header, #left, #right, #footer {
-    border: 1px solid black;
-    text-align: center;
+.wow{
+	width: 1200px;
+	margin: 10px;
 }
-#header {
-    width: 1200px;
-    height: 120px;
-    font-size: 20px;
-    background-color: lightgray;
+#header{
+	height: 120px;
+	text-align: center;
+	background-color: lightgray;
+	box-sizing: border-box;
+	padding: 45px;
 }
-#left {
-    width: 250px;
-    height: 600px;
-    background-color: lightblue;
-    font-size: 20px;
-    float: left;
+#left{
+	width: 250px;
+	height: 600px;
+	float: left;
+	padding: 290px 0px;
+	text-align: center;
+	background-color: skyblue;
+	box-sizing: border-box;
 }
-#center {
-    width: 800px;
-    height: 600px;
-    background-color: white;
-    font-size: 20px;
-    float: left; /* 사이드 바의 너비 */
+#middle{
+	width: 800px;
+	height: 600px;
+	float: left;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 290px;
 }
-#right {
-    width: 150px;
-    height: 600px;
-    background-color: lightblue;
-    font-size: 20px;
-    margin-left: auto; /* 사이드 바의 너비 */
+#right{
+	width: 150px;
+	height: 600px;
+	float: left;
+	padding: 290px 0px;
+	text-align: center;
+	background-color: skyblue;
+	box-sizing: border-box;
 }
-#footer {
-    width: 1200px;
-    height: 100px;
-    font-size: 20px;
-    background-color: lightgray;
-    clear: both; /* 부모 요소의 float 해제 */
+#footer{
+	height: 100px;
+	text-align: center;
+	background-color: lightgray;
+	box-sizing: border-box;
+	clear: both;
+	padding: 35px;
 }
 </style>
 </head>
@@ -56,7 +63,7 @@
 	<div id="left">
 		<section>사이드 바</section>
 	</div>
-	<div id="center">
+	<div id="middle">
 		<section>본문</section>		
 	</div>
 	<div id="right">
@@ -66,5 +73,3 @@
 		<p>푸터</p>
 	</div>
 </div>
-</body>
-</html>
