@@ -5,25 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Insert title here</title>
 <style type="text/css">
-*{margin: 0px; padding: 0px; box-sizing: border-box;}
-.w3-container{
-	background-color: green;
-	width: 100%;
-	height: 100px;
-	color: white;
-	padding: 10px;
-}
-w3-row-padding{
-	width: 100%;
-	display: flex;
-}
-w3-third{
-	padding: 20px;
-}
-h2{padding-bottom: 20px;}
-@media screen and (max-width: 600px){
-	w3-row-padding{flex-wrap: wrap;}
-}
+	* {
+	    margin: 0;
+	    padding: 0;
+	}
+	
+	.w3-container {
+	    background-color: lightgreen;
+	    color: white;
+	    padding: 20px;
+	}
+	
+	.w3-row-padding {
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: space-between;
+	}
+	
+	.w3-third {
+	    width: 33%;
+	    padding: 10px;
+	    box-sizing: border-box;
+	}
+	
+	@media screen and (max-width: 600px) {
+	    .w3-third {
+	        width: 100%;
+	        margin-bottom: 20px;
+	    }
+	}
 </style>
 </head>
 <body>
