@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>flex</title>
+<style type="text/css">
+	*{margin: 0px; padding: 0px;}
+	main{
+		width: 100%;
+		height: 100vh;
+		background: lightcyan;
+	}
+	section{ /* 블록레벨 */ 
+		width: 100%;
+		height: 100%;
+		border: 10px solid blue;
+		box-sizing: border-box;
+		display: flex;
+		flex-flow: row wrap;
+		/* flex-flow: row-reverse wrap; */ /* reverse 하면 거울모드 */
+		/* justify-content = 자식 요소를 정렬하는 거기 때문에 부모에다가 사용 */
+		justify-content: flex-start; /* 자식 요소를 시작 방향으로 정렬 */
+		justify-content: flex-end; /* 자식 요소를 종료 방향으로 정렬 */
+		justify-content: center; /* 자식 요소를 가운데로 정렬 */
+		justify-content: space-between; /* 자식 요소들의 좌우 사이 여백만 균일하게 배분해서 정렬 */
+		justify-content: space-around; /* 자식 요소들의 여백을 균일하게 배분해서 정렬,
+										  위랑 차이점은 양끝에도 여백있음 */
+		justify-content: space-evenly; /* 여백을 양끝까지 균일하게 배분해서 정렬, 
+										  around 와 차이점은 양끝 여백 균일 */ 
+		align-items: center; /* 자식 요소를 가운데 방향으로 정렬(상하)               */ 
+	}
+	section article{
+		width: 100px;
+		height: 100px;
+		background: aqua;
+		border: 1px solid #000;
+	}
+</style>
+</head>
+<body>
+	<main>
+		<section>
+			<article>1</article>
+			<article>2</article>
+			<article>3</article>
+			<article>4</article>
+			<article>5</article>
+		</section>
+	</main>
+</body>
+</html>
