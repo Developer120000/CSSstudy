@@ -21,13 +21,13 @@ h1, h2, h3{
 	background-color: silver;
 }
 
-ul > li:nth-of-type(1) {
+ul > li:nth-of-type(1) {	/* ul 에 있는 li 첫번째 */
 	background-color: skyblue;
 }
-ul > li:nth-of-type(2n-1) {
-	background-color: orange;
+ul > li:nth-of-type(2n-1) {		/* 홀수줄만 */
+	background-color: orange;  
 }
-ul li:nth-of-type(n) {
+ul li:nth-of-type(n) {		/* ul 에 있는 li 전부 */
 	border: 1px solid red;	
 }
 ul > li:first-child { /* 처음 요소 */
@@ -51,20 +51,20 @@ a[href^="mailto"]{ /* mailto 로 시작하는 */
 a[href$="net"]{ /* net 으로 끝나는 */
 	color: white;
 }
-a[href*="www"]{
+a[href*="www"]{		/* www 가 포함되어 있는 */
 	border: 1px solid olive;
 	text-decoration: none;
 }
-a:link {
+a:link {  	/* 방문하지 않은 곳에 글자색 */
 	color: gray;
 }
-a:visited {
+a:visited {		/* 방문한 곳에 글자색 */
 	color: gray;
 }
-a:active {
+a:active {		/* 클릭하고 있을때 글자색 */
 	color: blue;
 }
-a:hover {
+a:hover {		/* 마우스를 올려놨을때 배경색 */
 	background-color: lightgray;
 }
 .ch:focus{  /* form 에 포커스 되었을때 실버색 */
