@@ -90,7 +90,7 @@
 }
 
 /* 460x 이하이면 로고가 없어진다. */
-@media screen and (max-width:460px){
+@media screen and (max-width:500px){
 	.header_center{display: none;}
 	.header_search{display: block;}
 }

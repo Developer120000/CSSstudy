@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 4; /* header z-index 보다 낮게해서 동일선상에서 아래에 위치하게 */
+}
+
+.nav_wrapper{
+	/* 최소한의 크기 */
+	min-width: 200px;
+	min-height: 100vh; /* 화면 크기의 100% 높이 반응형 웹 */
+	background-color: #f0f0f0;
+	list-style: none;
+	padding-top: 100px;
+}
+
+.nav_wrapper li{
+	display: flex;
+	padding: 10px 16px;
+}
+
+.nav_wrapper li:hover{
+	background-color: lightgray;
+}
+
+.nav_icon{
+	border: none;
+	background-color: transparent;
+	font-size: 1.5rem;
+}
+
+.nav_menu{
+	border: none;
+	background-color: transparent;
+	font-size: 1rem;
+}
+
+@media screen and (max-width:800px){
+	.nav_menu{display: none;}  /* 800 너비 이하로 떨어지면 메뉴항목 안보임 */
+	.nav_wrapper{min-width: 50px;} /* 최소너비가 50 px 로 바뀜 */
+}
+
+/* 460x 이하이면 로고가 없어진다. */
+@media screen and (max-width:500px){
+	.nav_wrapper{display: none;}
+}
