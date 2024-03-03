@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+*{margin: 0px; padding: 0px; box-sizing: border-box;}
+	.header{
+		position: fixed;
+		z-index: 5;
+		box-shadow: 0 0 5px black;
+		top: 0;
+		left: 0;
+		background: tomato;
+		width: 100%;
+	}
+	
+	.head_wrapper{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 70px;
+	}
+	.hamberger{
+		border: none;
+		background-color: transparent;
+		font-size: 1.5rem;
+		margin-left: 15px;
+	}
+	.title{
+		margin-left: 20px;
+		display: inline;
+	}
+	.middle{
+		width: 40%;
+	}
+	.form{
+		display: flex;
+		max-width: 100%;
+	}
+	.searchbar{
+		width: 80%;
+		height: 30px;
+		padding: 0 5px;
+		border: 2px solid red;
+		border-right: none;
+		border-radius: 5px 0 0 5px;
+	}
+	.search{
+		width: 20%;
+		height: 30px;
+		border: 2px solid red;
+		border-left: none;
+		border-radius: 0 5px 5px 0;
+	}
+	.end{
+		display: flex;
+	}
+	.search2{
+ 		display: none; /* 평소에 안보이게 */
+		background: transparent;
+		border: none;
+		font-size: 1.5rem;
+	}
+	.face{
+		width: 40px;
+		height: 40px;
+		border: 1px solid blue;
+		border-radius: 50%;
+ 		background-image: url("profile-m.png");
+ 		background-size: 40px 40px;
+	}
+	
+	
+	.nav{
+		position: fixed;
+		z-index: 4;
+	}
+	
+	.nav_wrapper{
+		min-width: 150px;
+		min-height: 100vh;
+		background: coral;
+		padding-top: 40px;
+ 		list-style: none;
+ 		text-align: center;
+	}
+	
+	.icon{
+		font-size: 1.5rem;
+		border: none;
+		background: transparent;
+		padding: 0 5px;
+		margin-top: 20px;
+	}
+	
+	.menu{
+		font-size: 1.1rem;
+		border: none;
+		background: transparent;
+		margin-top: 20px;
+	}
+	
+	.vwrapper{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 60px 0 0 142px;
+		padding: 20px 0 0 10px;
+		background: #0000ff33;
+	}
+	
+	.vitem{
+		width: 25%;
+		margin-bottom: 100px;
+		padding: 0 10px;
+	}
+	
+	v.img{
+		max-width: 100%;
+		margin-bottom: 10px;
+	}
+	
+	.sub{
+		max-width: 100%;
+	}
+	
+	
+	.vtitle{
+		font-size: 1.2rem;
+	}
+	
+	.text{
+		font-size: 0.8rem;
+		white-space: nowrap;
+		margin-bottom: 5px;
+	}
+
+	.sub2{
+ 		display: flex;
+ 	}
+	
+	.profile{
+		width: 30px;
+		height: 30px;
+		background-image: url("profile-m.png");
+		background-size: 30px 30px;
+	}
+	
+	.owner{
+		margin: 5px 0 0 8px;
+	}
+	
+	@media screen and (max-width: 1200px){
+		.vitem{width: 33%;}
+	}	
+	@media screen and (max-width: 800px){
+		.title{display: none;}
+		.menu{display: none;}
+		.nav_wrapper{min-width: 40px;}
+		.vitem{width: 50%;}
+		.vwrapper{margin: 60px 0 0 30px;}
+	}
+	
+	@media screen and (max-width: 500px){
+		.form{display: none;}
+		.search2{display: block;}
+		.nav{display: none;}
+		.vitem{width: 100%;}
+		.vwrapper{margin: 60px 0 0 0; padding-left: 0;}
+	}
+</style>
+</head>
+<body>
+	<header class="header">
+		<div class="head_wrapper">
+			<div class="start">
+				<button class="hamberger">&#9776;</button>
+				<h2 class="title">JunTube</h2>
+			</div>
+			<div class="middle">
+				<form class="form">
+					<input class="searchbar" type="text" placeholder="동영상 검색">
+					<button class="search">검색</button>
+				</form>
+			</div>
+			<div class="end">
+				<button class="search2">&#128269;</button>
+				<span class="face"></span>
+			</div>
+		</div>
+	</header>
+	
+	<nav class="nav">
+		<ul class="nav_wrapper">
+			<li>
+				<button class="icon">&#9829;</button>
+				<button class="menu">인기 동영상</button>
+			</li>
+			<li>
+				<button class="icon">&#9829;</button>
+				<button class="menu">시청 기록</button>
+			</li>
+			<li>
+				<button class="icon">&#9829;</button>
+				<button class="menu">구독</button>
+			</li>
+		</ul>
+	</nav>
+	
+	<section class="video">
+		<div class="vwrapper">
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			<div class="vitem">
+				<img src="cat.jpg" class="vimg" width="100%" height="100%">
+				<div class="info">
+					<div class="sub">
+						<p class="vtitle">냥냥이의 하루</p>
+						<p class="text">조회수<span>235,324회</span> &#183; <span>1시간전</span></p>					
+					</div>
+					<div class="sub2">
+						<div class="profile"></div>
+						<span class="owner">JJun</span>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+		</div>
+	</section>
+
+</body>
+</html>

@@ -15,7 +15,7 @@
 	/* 기본축 정렬 */
 	justify-content: space-between; /* space-around: 여유공간이 똑같다 */
 	/* 교차축 정렬 */
-	align-items: center; /* 위아래 정렬 */
+	align-items: center; /* 세로축 중앙 정렬 */
 	height: 60px;
 	padding: 0px 16px;
 }
@@ -47,7 +47,7 @@
 	max-width: 100%; /* 최대 너비가 100% 부모를 넘어가지 않게 해달라 */
 }
 .header_input_text{
-	/* 100% => 부모가 갖고있는 전체 크기 */
+	/* 100% => 부모가 갖고있는 너비 100% 에서 60px 뺀 너비 설정 */
 	width: calc(100% - 60px); 
 	height: 40px;
 	padding: 0 5px;
